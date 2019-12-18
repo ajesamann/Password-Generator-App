@@ -1,0 +1,138 @@
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  border-radius: 20px;
+  background-color: #ececec;
+  padding: 120px;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.password {
+  position: absolute;
+  font-size: 2rem;
+  background-color: white;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: 2px solid #dbdbdb;
+  cursor: pointer;
+  bottom: 50%;
+}
+
+.generate-password {
+  padding: 15px 100px;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  color: white;
+  border-radius: 5px;
+  background-color: #0099ff;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20%;
+}
+
+.generate-password:hover {
+  background-color: #007fd4;
+}
+
+.clickhere {
+  font-size: 1.3rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 13%;
+}
+
+.copied {
+  font-size: 1.3rem;
+  background-color: #74d65e;
+  color: #346629;
+  padding: 15px 50px;
+  border: 2px solid #346629;
+  border-radius: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.slidercon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background-color: #0099ff;
+  height: 5px;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: #00406b;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.inputvalue {
+  margin-top: 12.5px;
+}
+
+.specialcon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  bottom: 32.5%;
+  user-select: none;
+}
+
+.specialcon input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.checkbox {
+  cursor: pointer;
+  display: block;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #0099ff;
+  margin-right: 10px;
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.specialcon input:checked ~ .checkbox:after {
+  display: block;
+}
+
+.specialcon .checkbox:after {
+  width: 8px;
+  border-radius: 50%;
+  height: 8px;
+  background-color: #00406b;
+  top: 4px;
+  left: 4px;
+}
