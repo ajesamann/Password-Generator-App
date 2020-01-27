@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Transition, animated } from "react-spring/renderprops";
 
 class RandomPassword extends Component {
   state = {
@@ -131,22 +130,9 @@ class RandomPassword extends Component {
     const { randomPassword } = this.state;
     return (
       <div className="container">
-        <Transition
-          native
-          items={this.state.showCopied}
-          from={{ transform: "translate3d(0, -200px, 0)" }}
-          enter={{ transform: "translate3d(0, -50px, 0)" }}
-          leave={{ transform: "translate3d(0, -200px, 0)" }}
-        >
-          {show =>
-            show &&
-            (props => (
-              <animated.div style={props}>
-                <div className="copied">Successfully copied to clipboard</div>
-              </animated.div>
-            ))
-          }
-        </Transition>
+        {this.state.showCopied ? (
+          <div className="copied">Successfully copied to clipboard</div>
+        ) : null}
         <div className="slidercon">
           <input
             type="range"
